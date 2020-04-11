@@ -7,7 +7,7 @@ var cities = [];
     $("#currentWeather").empty();
 
     var cityName = prevCity || $("#cityInput").val().trim();
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=1c8da99a33ddaf628d6ec8b6277d71b0";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=1c8da99a33ddaf628d6ec8b6277d71b0";
 
     // AJAX call for the weather for the specific city button that was clicked
     $.ajax({
