@@ -1,6 +1,5 @@
 // Starter cities
-var cities = ["Seattle", "Chicago", "Miami"];
-
+var cities = [];
 
   // currentWeather function displays the current weather conditions for the city that was clicked
   function displayCurrentWeather(prevCity) {
@@ -23,8 +22,6 @@ var cities = ["Seattle", "Chicago", "Miami"];
       var iconCode = response.weather[0].icon;
       var iconUrl = "https://openweathermap.org/img/wn/" + iconCode + ".png";
       var realIcon = $("<div>").append($("<img>").attr("src", iconUrl).attr("class", "card-img-sm"));
-      
-      // var futureImg = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + fiveDay.list[i].weather[0].icon + "@2x.png");
 
       var header = $("<div>").html($("<h3>").text(response.name + " (" + (moment().format("M" + "/" + "D" + "/" + "YYYY")) + ") "));
       $("#currentWeather").append(header);
@@ -116,6 +113,7 @@ var cities = ["Seattle", "Chicago", "Miami"];
   }
 
   init();
+
   // Function for displaying cities
   function renderCities() {
 
@@ -147,14 +145,14 @@ var cities = ["Seattle", "Chicago", "Miami"];
       localStorage.setItem("cities", JSON.stringify(cities));
     }
 
-      // Event listener for the search button
+    // Event listener for the search button
     $("#button-addon2").on("click", function(event) {
       event.preventDefault();
       // This line gets text from the input box
       var cityName = $("#cityInput").val().trim();
       // This will add the user's input into the array of cities
       cities.push(cityName);
-
+      
       storeCities();
       renderCities();
       displayCurrentWeather();
