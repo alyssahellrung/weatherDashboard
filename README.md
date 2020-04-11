@@ -10,6 +10,7 @@ LINK TO DEPLOYED WEBPAGE
 [Click here](https://alyssahellrung.github.io/weatherDashboard)
 
 SCREEN SHOT
+![image](https://user-images.githubusercontent.com/57811605/79056455-b0263580-7c0b-11ea-9967-38484ba3ea99.png)
 
 ASSESSMENT
 This seemingly-simple project required me to use many techniques I have learned so far and teach myself new ones as well (such as using multiple APIs at one time).  
