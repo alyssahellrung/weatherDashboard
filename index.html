@@ -4,8 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Dashboard</title>
+<!-- Link to Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Link to Font Awesome -->
+  <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous">
+<!-- Link to my stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
+<!-- Title bar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand brand-centered" href="#">Weather Dashboard</a>
+    </div>
+  </nav>
+
+    <div class="row">
+      <!-- Card with search box and list of cities searched -->
+      <div class="col-lg-4 card" id="searchCard">
+        <div class="card-body">
+          <h4>Search for a City: </h4>
+          <div class="input-group mb-3">
+          <input type="text" class="form-control" id="cityInput" aria-label="Search" aria-describedby="button-addon2">
+          <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+          </div>
+          </div>
+          <!-- Empty div where new buttons will render -->
+          <div id="buttons-view"></div>
+        </div>
+      </div>
+      <div class="col-lg-8 weather">
+        <!-- Div to display current weather conditions -->
+        <div class="container" id="currentWeather"></div>
+          <!-- Div to display 5-day forecast --> 
+          <div class="row forecast">
+            <h4>5-Day Forecast</h4>
+            <div id="future"></div>
+          </div>    
+        </div> 
+      </div>
+   
+<!-- Links to jQuery, moment.js, and my script file -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
