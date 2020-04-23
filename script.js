@@ -137,7 +137,16 @@ var cities = [];
       if (storedCities !== null) {
         cities = storedCities;
       }
+      var lastSearchedCity;
+      if (storedCities === null) {
+        lastSearchedCity = "Seattle";
+      } else {
+        lastSearchedCity = (storedCities[storedCities.length -1]);
+      }
+
       renderCities();
+      displayCurrentWeather(lastSearchedCity);
+      displayFiveDay(lastSearchedCity);
     }
 
     //Sets button list into local storage
@@ -152,11 +161,13 @@ var cities = [];
       var cityName = $("#cityInput").val().trim();
       // This will add the user's input into the array of cities
       cities.push(cityName);
+  
       
       storeCities();
       renderCities();
       displayCurrentWeather();
       displayFiveDay();
+      $("#cityInput").val("");
     });
 
     // Event listener for the city buttons
